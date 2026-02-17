@@ -9,7 +9,7 @@
 ![Portfolio Preview](https://img.shields.io/badge/Status-Online-brightgreen?style=for-the-badge)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-blue?style=for-the-badge)
 
-&lt;/div&gt;
+&lt;&gt;
 
 ## 🌐 Live Demo
 
