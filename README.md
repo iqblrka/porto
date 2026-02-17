@@ -3,7 +3,7 @@
 &lt;div align="center"&gt;
 
 [![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://iqball.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/username/portfolio-iqbal)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iqblrka)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/muhammad-iqbal-rakha)
 
 ![Portfolio Preview](https://img.shields.io/badge/Status-Online-brightgreen?style=for-the-badge)
