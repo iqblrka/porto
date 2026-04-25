@@ -104,45 +104,46 @@ body {
 }
 
 /* ============================
-   TILT CARD & BORDER BEAM
+   TILT CARD — CLEAN GLOW HOVER
    ============================ */
 .tilt-card {
     position: relative;
     transform-style: preserve-3d;
     will-change: transform;
-    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    transition: transform 0.1s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.tilt-card .border-beam {
+/* Shine overlay on hover */
+.tilt-card::before {
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    pointer-events: none;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.04) 0%,
+        rgba(59,130,246,0.04) 50%,
+        transparent 100%
+    );
     opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 0;
-    overflow: hidden;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.tilt-card:hover .border-beam { opacity: 1; }
-
-.tilt-card .border-beam::after {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.6), transparent);
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
-    offset-path: rect(0 auto auto 0 rounded 1rem);
-    animation: border-beam 4s linear infinite;
+.tilt-card:hover::before {
+    opacity: 1;
 }
 
 .tilt-card:hover {
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 20px rgba(59, 130, 246, 0.15);
-    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow:
+        0 0 0 1px rgba(59,130,246,0.35),
+        0 20px 50px rgba(0,0,0,0.5),
+        0 0 35px rgba(59,130,246,0.1);
+    border-color: rgba(59, 130, 246, 0.3) !important;
 }
 
-.tilt-card > * { position: relative; z-index: 1; }
+.tilt-card > * { position: relative; z-index: 2; }
 
 .inner-glow {
     position: absolute;
@@ -236,6 +237,70 @@ body {
     50%       { transform: translateY(-20px); }
 }
 
-@keyframes border-beam {
-    100% { offset-distance: 100%; }
+/* border-beam removed — replaced with glow effect */
+
+/* ============================
+   PROJECT CARD CLICKABLE
+   ============================ */
+.project-card-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 1rem;
+    position: relative;
+    overflow: visible;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Ripple / press effect */
+.project-card-link:active .project-card-inner {
+    transform: scale(0.985);
+    transition: transform 0.1s ease;
+}
+
+.project-card-inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    transition: transform 0.25s ease;
+}
+
+/* "Klik untuk buka" hint badge */
+.project-card-link .card-hint {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(8,12,22,0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(59,130,246,0.3);
+    color: rgba(147,197,253,0.9);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 999px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 20;
+    letter-spacing: 0.5px;
+}
+
+.project-card-link:hover .card-hint {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Arrow icon pulse on card hover */
+.project-card-link:hover .lihat-detail-btn {
+    background: #3b82f6;
+    color: #fff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 20px rgba(59,130,246,0.45);
+}
+
+.lihat-detail-btn {
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
