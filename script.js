@@ -38,9 +38,13 @@ tailwind.config = {
    PARTIKEL BACKGROUND
    ============================ */
 function initParticles() {
+    // Kurangi partikel di HP/tablet untuk hemat CPU & baterai
+    const isMobile = window.matchMedia('(pointer: coarse)').matches;
+    const particleCount = isMobile ? 15 : 40;
+
     particlesJS("particles-js", {
         particles: {
-            number:  { value: 40, density: { enable: true, value_area: 800 } },
+            number:  { value: particleCount, density: { enable: true, value_area: 800 } },
             color:   { value: ["#3b82f6", "#06b6d4", "#ffffff"] },
             shape:   { type: "circle" },
             opacity: { value: 0.2, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.05, sync: false } },
