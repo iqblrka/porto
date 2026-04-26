@@ -13,7 +13,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <!-- Image CDN: postimg -->
     <link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+    <link rel="dns-prefetch" href="https://i.postimg.cc">
+
+    <!-- Image CDN: imgbb (semua foto proyek & sertifikat) -->
+    <link rel="preconnect" href="https://i.ibb.co.com" crossorigin>
+    <link rel="dns-prefetch" href="https://i.ibb.co.com">
+
+    <!-- Preload: foto profil (above-the-fold, eager) -->
+    <link rel="preload" as="image" href="https://i.postimg.cc/5NWW7jh8/IMG-6023.jpg" fetchpriority="high">
+
+    <!-- Preload: gambar proyek pertama yang langsung terlihat saat scroll -->
+    <link rel="preload" as="image" href="https://i.ibb.co.com/p6mDP5Qd/screenshot-692f7bf9e2959.jpg">
+    <link rel="preload" as="image" href="https://i.ibb.co.com/TBgGw9Jw/1766391314112.jpg">
+
+    <!-- Preload: sertifikat baris pertama -->
+    <link rel="preload" as="image" href="https://i.ibb.co.com/GQwZ9dbW/Screenshot-2026-04-26-121539.png">
+    <link rel="preload" as="image" href="https://i.ibb.co.com/TMBhwvxK/Screenshot-2026-04-26-121949.png">
+    <link rel="preload" as="image" href="https://i.ibb.co.com/FbkLd2Df/Screenshot-2026-04-26-124025.png">
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -198,7 +216,7 @@
                         <div class="card-hint">↗ Klik untuk buka</div>
                         <div class="project-card-inner">
                         <div class="h-56 sm:h-64 bg-darkCard flex items-center justify-center relative overflow-hidden rounded-t-2xl group-hover:brightness-110 transition-all duration-500">
-                            <img src="https://i.ibb.co.com/p6mDP5Qd/screenshot-692f7bf9e2959.jpg" alt="SimpelSi Preview" loading="lazy" class="project-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <img src="https://i.ibb.co.com/p6mDP5Qd/screenshot-692f7bf9e2959.jpg" alt="SimpelSi Preview" loading="lazy" fetchpriority="high" class="project-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
                         <div class="p-6 flex flex-col flex-grow bg-darkCard/60 backdrop-blur-md relative z-10 border-t border-white/5">
                             <div class="flex justify-between items-center mb-2">
@@ -221,7 +239,7 @@
                         <div class="card-hint">↗ Klik untuk buka</div>
                         <div class="project-card-inner">
                         <div class="h-56 sm:h-64 bg-darkCard flex items-center justify-center relative overflow-hidden rounded-t-2xl group-hover:brightness-110 transition-all duration-500">
-                             <img src="https://i.ibb.co.com/TBgGw9Jw/1766391314112.jpg" alt="FarmCode Preview" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'%3E%3Crect fill=\'%23101725\' width=\'600\' height=\'400\'/%3E%3Ctext fill=\'%233b82f6\' font-family=\'sans-serif\' font-size=\'24\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'0.3em\'%3EFarmCode Simulator%3C/text%3E%3C/svg%3E'" loading="lazy" class="project-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                             <img src="https://i.ibb.co.com/TBgGw9Jw/1766391314112.jpg" alt="FarmCode Preview" fetchpriority="high" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'%3E%3Crect fill=\'%23101725\' width=\'600\' height=\'400\'/%3E%3Ctext fill=\'%233b82f6\' font-family=\'sans-serif\' font-size=\'24\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'0.3em\'%3EFarmCode Simulator%3C/text%3E%3C/svg%3E'" loading="lazy" class="project-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
                         </div>
                         <div class="p-6 flex flex-col flex-grow bg-darkCard/60 backdrop-blur-md relative z-10 border-t border-white/5">
                             <div class="flex justify-between items-center mb-2">
@@ -301,7 +319,7 @@
 
                     <a href="https://drive.google.com/file/d/1lCGePYnelA8qiqav0h-w6ziCy4Og93DD/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="glass-effect rounded-2xl tilt-card shadow-lg hover:shadow-2xl border border-white/5 flex flex-col group transition-all duration-300">
                         <div class="h-48 sm:h-56 bg-white/5 flex items-center justify-center relative overflow-hidden rounded-t-2xl group-hover:brightness-110 transition-all duration-500 p-4">
-                            <img src="https://i.ibb.co.com/GQwZ9dbW/Screenshot-2026-04-26-121539.png" alt="Data Analytics: SQL" loading="lazy" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                            <img src="https://i.ibb.co.com/GQwZ9dbW/Screenshot-2026-04-26-121539.png" alt="Data Analytics: SQL" loading="lazy" fetchpriority="high" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                         </div>
                         <div class="p-5 flex flex-col flex-grow bg-darkCard/60 backdrop-blur-md relative z-10 border-t border-white/5">
                             <h3 class="font-bold text-lg mb-1 truncate group-hover:text-secondary transition-colors tracking-tight">Data Analytics: SQL</h3>
@@ -317,7 +335,7 @@
 
                     <a href="https://drive.google.com/file/d/1stgUhKoY1ZzKdLBQ6IjsHfr7XSqkum7R/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="glass-effect rounded-2xl tilt-card shadow-lg hover:shadow-2xl border border-white/5 flex flex-col group transition-all duration-300">
                         <div class="h-48 sm:h-56 bg-white/5 flex items-center justify-center relative overflow-hidden rounded-t-2xl group-hover:brightness-110 transition-all duration-500 p-4">
-                            <img src="https://i.ibb.co.com/TMBhwvxK/Screenshot-2026-04-26-121949.png" alt="Remote Job with Gemini AI" loading="lazy" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                            <img src="https://i.ibb.co.com/TMBhwvxK/Screenshot-2026-04-26-121949.png" alt="Remote Job with Gemini AI" loading="lazy" fetchpriority="high" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                         </div>
                         <div class="p-5 flex flex-col flex-grow bg-darkCard/60 backdrop-blur-md relative z-10 border-t border-white/5">
                             <h3 class="font-bold text-lg mb-1 truncate group-hover:text-secondary transition-colors tracking-tight">Remote Job with Gemini AI</h3>
@@ -333,7 +351,7 @@
 
                     <a href="https://www.dicoding.com/dicodingassets/coursecertificate/bfa6ec62815a8674d9cd9a5bf83251b8d9b180b0/view" target="_blank" rel="noopener noreferrer" class="glass-effect rounded-2xl tilt-card shadow-lg hover:shadow-2xl border border-white/5 flex flex-col group transition-all duration-300">
                         <div class="h-48 sm:h-56 bg-white/5 flex items-center justify-center relative overflow-hidden rounded-t-2xl group-hover:brightness-110 transition-all duration-500 p-4">
-                            <img src="https://i.ibb.co.com/FbkLd2Df/Screenshot-2026-04-26-124025.png" alt="Belajar Dasar AI" loading="lazy" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                            <img src="https://i.ibb.co.com/FbkLd2Df/Screenshot-2026-04-26-124025.png" alt="Belajar Dasar AI" loading="lazy" fetchpriority="high" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                         </div>
                         <div class="p-5 flex flex-col flex-grow bg-darkCard/60 backdrop-blur-md relative z-10 border-t border-white/5">
                             <h3 class="font-bold text-lg mb-1 truncate group-hover:text-secondary transition-colors tracking-tight">Belajar Dasar AI</h3>
@@ -384,7 +402,8 @@
                             <img src="https://i.ibb.co.com/VWcSXGKT/Screenshot-2026-04-26-125129.png" alt="Juara 3 KMIPN VII" loading="lazy" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                         </div>
                         <div class="p-5 flex flex-col flex-grow bg-darkCard/60 backdrop-blur-md relative z-10 border-t border-white/5">
-                            <h3 class="font-bold text-sm mb-1 leading-snug text-yellow-300 tracking-tight">Juara 3 Pengembangan Aplikasi Permainan Kategori Narration &amp; Storytelling</h3>
+                            <h3 class="font-bold text-lg mb-1 truncate text-yellow-300 tracking-tight">Juara 3 Pengembangan Aplikasi
+                                 Permainan Kategori Narration & Storrytelling</h3>
                             <p class="text-yellow-100 text-sm mb-3 font-medium">KMIPN VII - Politeknik Negeri Padang</p>
                             <div class="flex justify-between items-center mt-auto pt-2">
                                 <div>
